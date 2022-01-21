@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap');
+:root{
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+    --font: 'Red Hat Display', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--Pale-blue);
+}
+
+.card-container{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2vh;
+    block-size: 88vh;
+    inline-size: 85vw;
+    font-family: var(--font);
+    font-size: 1.2em;
+    color:hsl(224, 23%, 55%);
+    background-color: white;
+    position: relative;
+    top: 20px;
+    left: 7%;
+}
+
+h1, p{
+    text-align: center;
+}
+
+div:not(.principal-image, .annual-plan, .card-container, .image-annual-plan){
+    padding-inline: 12px;
+}
+
+.principal-image{
+    position: relative;
+    top: -15px;
+    inline-size: 100%;
+    block-size: 200px;
+}
+
+img[alt="listening-music"]{
+    max-width: 100%;
+    border-top-left-radius: 2vh;
+    border-top-right-radius: 2vh;
+}
+
+p:not(.annual-plan-prices p)::after{
+    content: '!';
+    margin-block-start: 30px;
+}
+
+p:not(.annual-plan-prices p){
+    line-height: 35px;
+}
+
+h1, .image-annual-plan p{
+    font-weight: bold;
+    color: var(--Dark-blue);
+}
+
+.image-annual-plan p{
+    font-size: 1rem;
+}
+
+.annual-plan{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--Very-pale-blue);
+    inline-size: 100%;
+    border-radius: 2vh;
+    margin-block: 20px;
+}
+
+.annual-plan a{
+    margin-inline-end: 20px;
+    color: var(--Bright-blue);
+    font-weight: bold;
+}
+
+.image-annual-plan{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+small::before{
+    content: '$';
+}
+
+img[alt="music-icon"]{
+    inline-size: 45px;
+    block-size: 45px;
+    margin: 10px;
+}
+
+a:not(.annual-plan a){
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+
+.annual-plan a:hover{
+    text-decoration: none;
+    color: var(--Desaturated-blue);
+}
+
+#payment{
+    background-color: var(--Bright-blue);
+    color: white;
+    block-size: 50px;
+    border-radius: 2vh;
+    box-shadow: 0px 5px 5px 5px rgba(77, 74, 74, 0.191);
+    margin-block-end: 20px;
+    line-height: 250%;
+}
+
+#payment:hover{
+    background-color: var(--Desaturated-blue);
+}
+
+#cancel{
+   color: var(--Desaturated-blue);
+}
+
+#cancel:hover, .attribution a:hover{
+    color: var(--Dark-blue);
+}
+
+.attribution{
+    position: relative;
+    top: 24px;
+}
+
+.attribution a{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+/* Tablet Design */
+
+@media screen and (min-width: 768px) and (max-width:1023px){
+    .card-container{
+        block-size: 63vh;
+        inline-size: 55vw;
+        top: 15vh;
+        left: 24vw;
+    }
+    
+    .principal-image{
+        block-size: 250px;
+        top: -20px;
+    }
+    
+}
+/* Desktop design */
+
+@media screen and (min-width:1024px) {
+    .card-container{
+        block-size: 90vh;
+        inline-size: 25vw;
+        top: 2vh;
+        left: 35vw;
+    }
+    .principal-image{
+        inline-size: 100%;
+        block-size: 150px;
+        top: -28px;
+    }
+    
+}
