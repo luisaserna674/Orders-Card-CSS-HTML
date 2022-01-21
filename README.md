@@ -1,6 +1,6 @@
 ## Welcome! 👋
 
-# Frontend Mentor - NFT preview card component
+# Frontend Mentor - Orders Card
 Here you have the template results
 ![Template results](./images/gif.gif)
 
